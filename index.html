@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz Quest</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Quiz Quest 🚀</h1>
+  <div class="stats">
+    <span>⭐ <b id="points">0</b></span>
+    <span>🔥 <b id="streak">0</b></span>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="screen active">
+    <h2>Pick your zone, champion!</h2>
+    <div class="zones">
+      <button class="zone rme" data-zone="rme"><span>🌍</span>RME Zone<small>Our Environment</small></button>
+      <button class="zone reading" data-zone="reading"><span>🐉</span>Reading Zone<small>How to Train Your Dragon</small></button>
+    </div>
+    <p id="best"></p>
+  </section>
+
+  <section id="quiz" class="screen">
+    <div class="top">
+      <button id="back" class="ghost">⬅ Home</button>
+      <button id="notesBtn" class="ghost">📖 Read the notes</button>
+    </div>
+    <div class="bar"><div id="fill"></div></div>
+    <p id="count"></p>
+    <h2 id="question"></h2>
+    <div id="options"></div>
+    <div id="feedback" hidden></div>
+    <button id="next" hidden>Next ➜</button>
+  </section>
+
+  <section id="result" class="screen">
+    <h2 id="resTitle"></h2>
+    <div id="stars"></div>
+    <p id="resText"></p>
+    <button id="again">Play again 🔁</button>
+    <button id="home2" class="ghost">Home</button>
+  </section>
+</main>
+
+<dialog id="notes">
+  <button id="closeNotes" class="ghost">✖ Close</button>
+  <div id="notesBody"></div>
+</dialog>
+<div id="toast"></div>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
